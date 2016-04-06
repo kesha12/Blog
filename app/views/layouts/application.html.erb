@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <html lang="en">
+<title>My Blog</title>
+ <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<style>
+.w3-section {margin-top:50px}
+</style>
+<body>
+  <nav class="w3-sidenav w3-white w3-card-2" style="display:none">
+  <a href="javascript:void(0)" 
+  onclick="w3_close()"
+  class="w3-closenav w3-large">Close &times;</a>
+  <%= link_to "Home", posts_path %> 
+ <%= link_to "New Post", new_post_path %>   
+  <a href="/about.html">About me</a> 
+  
+  <a href="/contact_me.html">Contact me...!</a> 
+  <% if user_signed_in? %>
+  <li>
+  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>        
+  </li>
+<% else %>
+  <li>
+  <%= link_to('Login', new_user_session_path)  %>  
+  </li>
+<% end %>
+  
+</nav>
+
+
+<%= yield %>
+</body>
+<!-- Footer -->
+<footer class="w3-container w3-padding-32 w3-theme w3-center">
+  <h4>Follow Me</h4>
+  <a class="w3-btn-floating w3-teal" href="javascript:void(0)" title="Rss"><i class="fa fa-rss"></i></a>
+  <a class="w3-btn-floating w3-teal" href="javascript:void(0)" title="Facebook"><i class="fa fa-facebook"></i></a>
+  <a class="w3-btn-floating w3-teal" href="javascript:void(0)" title="Twitter"><i class="fa fa-twitter"></i></a>
+  <a class="w3-btn-floating w3-teal" href="javascript:void(0)" title="Google +"><i class="fa fa-google-plus"></i></a>
+  <a class="w3-btn-floating w3-teal" href="javascript:void(0)" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+  <p>&#169; Copyright on this site</p>      
+
+  <div style="position:relative;bottom:103px;z-index:1;" class="w3-tooltip w3-right">
+    <span class="w3-text w3-padding w3-teal">Go To Top</span>   
+    <a class="w3-btn w3-theme" href="#myweb"><span class="w3-xlarge">
+    <i class="fa fa-chevron-circle-up"></i></span></a>
+  </div>        
+</footer>
+
+<script>
+function w3_open() {
+    document.getElementsByClassName("w3-sidenav")[0].style.display = "block";
+}
+function w3_close() {
+    document.getElementsByClassName("w3-sidenav")[0].style.display = "none";
+}
+</script>
+
+
+</html>

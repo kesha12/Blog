@@ -1,0 +1,22 @@
+
+<div class="w3-container w3-theme" style="position:relative">
+<span class="w3-opennav w3-xlarge" onclick="w3_open()">&#9776;</span>
+ <h1 class="w3-jumbo w3-text-grey w3-text-shadow w3-animate-left">My Blog</h1>
+</div>
+
+
+<div class="w3-grey w3-animate-zoom" style="padding:20px 50px;background-image:url('/assets/pic_boat_portrait.jpg');
+background-size:cover;">
+
+
+<h1 class="w3-text-teal w3-xxlarge w3-left w3-text-shadow ">Edit Post</h1>
+
+ 
+<%= render 'form' %>
+ 
+<ul class="w3-pagination w3-border w3-round ">
+    <li><%= link_to '❮ Previous', posts_path %></li>
+    <li><%= link_to 'Next ❯', new_post_path %></li>
+  </ul>
+
+</div>

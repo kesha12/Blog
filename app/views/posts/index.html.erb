@@ -1,0 +1,57 @@
+<div class="w3-container w3-theme" style="position:relative">
+<span class="w3-opennav w3-xlarge" onclick="w3_open()">&#9776;</span>
+ <p class="w3-btn-floating-large w3-right w3-theme-action" style="position:absolute;top:156px;right:42px;"><i><%= link_to '+', new_post_path %></i></p>
+ <h1 class="w3-jumbo w3-text-grey w3-text-shadow">My Blog</h1>
+</div>
+
+<div class="w3-grey w3-animate-zoom" style="padding:20px 50px;background-image:url('/assets/pic_boat_portrait.jpg');
+background-size:cover;">
+
+<div class="w3-section w3-row-padding">
+<div class="w3-twothird">
+
+<img class ="w3-circle" src="<%= asset_path ('img0.jpg') %>" alt="Car" style="width:70%">
+    <div class="w3-card-4">
+      <div class="w3-container w3-theme">
+        <p>Journey begins from here</p>
+      </div>
+    </div>
+  </div>
+
+
+
+
+<div class="w3-third w3-container w3-center">
+      
+    <div class="w3-card-4">
+      <div class="w3-container">
+      <p class="w3-jumbo">&#9993;</p>
+      <p class="w3-large"> + <%= @posts.count%></p>
+      </div>
+     <div class="w3-container w3-white">
+       <p><%= @last.created_at.strftime("%B, %d, %Y") %></p>
+      </div>
+    </div>
+  </div>
+</div>
+ <% @posts.each do |post| %>
+
+ <div class="w3-section w3-container">
+<div class="w3-card-4">
+    <%= image_tag (post.image.url), class:"w3-image w3-margin-32" %>
+   
+  <div class="w3-container w3-white">
+
+<h2><%= link_to post.title, post %></h2>
+<%= link_to "Comments: #{post.comments.count}" %>
+   
+    
+ <p class="w3-right"><%= post.created_at.strftime("%B, %d, %Y") %></p>
+  
+  </div>
+</div>
+</div>
+
+<br>
+  
+    <% end %>

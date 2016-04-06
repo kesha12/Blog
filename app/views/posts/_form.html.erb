@@ -1,0 +1,41 @@
+<%= form_for @post do |f| %>
+ 
+  <% if @post.errors.any? %>
+  <div class="w3-container w3-red">
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@post.errors.count, "error") %> prohibited
+        this article from being saved:
+      </h2>
+      <ul>
+        <% @post.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+  <% end %>
+  <div class="w3-container w3-margin-64 w3-card-24">
+ 
+  <p >
+  <h1>  <%= f.label :title %></h1>
+    
+    <%= f.text_field :title %>
+  </p>
+ 
+<p>
+    <h1><%= f.label :body %></h1><br>
+    <%= f.text_area :body, size: "60x12" %>
+  </p>
+
+   <p>
+  <%= f.label :image, "Attach an Image" %><br />
+  <%= f.file_field :image %>
+
+  </p>
+  
+   <p> <i><%= f.submit "Post" ,html: {class: "w3-btn w3-black w3-center w3-round-xlarge"}%></i></p>
+   </div>
+
+ 
+<% end %>

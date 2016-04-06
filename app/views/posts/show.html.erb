@@ -1,0 +1,46 @@
+<div class="w3-container w3-theme" style="position:relative">
+<span class="w3-opennav w3-xlarge" onclick="w3_open()">&#9776;</span>
+ <h1 class="w3-jumbo w3-text-grey w3-text-shadow">My Blog</h1>
+</div>
+
+<div class="w3-grey w3-animate-zoom" style="padding:20px 50px;background-image:url('/assets/pic_boat_portrait.jpg');
+background-size:cover;">
+
+<h1 class="w3-text-teal w3-xxlarge w3-left w3-text-shadow ">Showing Posts</h1>
+
+   <br>
+
+<div class="w3-conatiner w3-round-large w3-margin-64 w3-card-4">
+<h2 class="w3-center ">
+	<%= @post.title %>
+
+</h2>
+<p>
+ <%= image_tag @post.image.url, class:"w3-image" %>
+
+</p>
+<p class="w3-right">
+	Submitted <%= time_ago_in_words(@post.created_at) %> Ago</p>
+	<p class="w3-center">
+	<%= @post.body %>
+</p>
+	<%= link_to 'Edit', edit_post_path(@post)%>
+	| <%= link_to 'Delete' , post_path(@post) ,method: :Delete , data: { confirm: 'Are you sure?' } %>
+</p>
+
+
+</div>
+<div class="w3-margin-64">
+<h2><%= @post.comments.count %> Comments</h2>
+<%= render @post.comments %> 
+
+<h3>Add a comment</h3>
+<%= render "comments/form"%>
+
+ <div class="w3-center">   
+<ul class="w3-pagination w3-border w3-round ">
+    <li><%= link_to '❮ Previous', posts_path %></li>
+    <li><%= link_to 'Next ❯', new_post_path %></li>
+  </ul>
+</div>
+</div>

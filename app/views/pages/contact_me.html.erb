@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<title>Contact Me</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+div
+{
+padding: 50px 200px 50px 250px;
+}
+</style>
+<body>
+<nav class="w3-sidenav w3-white w3-card-2" style="display:none">
+  <a href="javascript:void(0)" 
+  onclick="w3_close()"
+  class="w3-closenav w3-large">Close &times;</a>
+  <a href="/home/ritu/mysite/myweb.html">Home</a>		
+  <a href="#">Add New articles</a>		
+  <a href="/home/ritu/mysite/about.html">About me</a>	
+  <a href="/home/ritu/mysite/album.html">My Album</a>	
+  <a href="/home/ritu/mysite/about.html">Contact me...!</a>	
+  
+</nav>
+
+<div class="w3-container w3-teal ">
+<span class="w3-opennav w3-xlarge" onclick="w3_open()">&#9776;</span>
+<h1>CONTACT ME...</h1>
+</div>
+
+<div class="w3-center w3-teal">
+<img src="<%= asset_path ('img_me.jpg') %>" class="w3-circle" alt="Ritu" style="width:40%">
+</div>
+<div class="w3-conatiner w3-card-4 w3-margin-64">
+	<ul>
+		<li><strong>Name :</strong>Rituja Kesharwani</li>
+		<li><strong>Address :</strong>Walchand College of Engineering Sangli</li>
+		<li><strong>Number :</strong>8928611220</li>
+		<li><strong>Email :</strong>ritujakesharwani111@gmail.com</li>
+	</ul>
+	</div> 
+
+</div>

@@ -1,0 +1,14 @@
+<div class="w3-container w3-theme" style="position:relative">
+<span class="w3-opennav w3-xlarge" onclick="w3_open()">&#9776;</span>
+ <h1 class="w3-jumbo w3-text-grey w3-text-shadow w3-animate-left">My Blog</h1>
+</div>
+<div class="w3-container w3-circle w3-black w3-center w3-card-4 w3-margin-64 w3-animate-right">
+
+<p>Hello <%= @resource.email %>!</p>
+
+<p>Your account has been locked due to an excessive number of unsuccessful sign in attempts.</p>
+
+<p>Click the link below to unlock your account:</p>
+
+<p><%= link_to 'Unlock my account', unlock_url(@resource, unlock_token: @token) %></p>
+</div>

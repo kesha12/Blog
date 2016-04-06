@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<title>Album of Life</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="<%= stylesheet_link_tag "posts" %>">
+<body>
+
+<nav class="w3-sidenav w3-white w3-card-2" style="display:none">
+  <a href="javascript:void(0)" 
+  onclick="w3_close()"
+  class="w3-closenav w3-large">Close &times;</a>
+  <a href="/home/ritu/mysite/myweb.html">Home</a>		
+  <a href="#">Add New articles</a>		
+  <a href="/home/ritu/mysite/about.html">About me</a>	
+  <a href="/home/ritu/mysite/album.html">My Album</a>	
+  <a href="/home/ritu/mysite/about.html">Contact me...!</a>	
+  
+</nav>
+
+<div class="w3-container w3-teal">
+<span class="w3-opennav w3-xlarge" onclick="w3_open()">&#9776;</span>
+<h1>College Life....</h1>
+</div>
+
+<div class="w3-row-padding w3-margin-top">
+
+<div class="w3-third">
+<div class="w3-card-2">
+<img src="<%= asset_path ('img0.jpg') %>" style="width:100%">
+<div class="w3-container">
+<h5>My College</h5>
+</div>
+</div>
+</div>
+
+<div class="w3-third">
+<div class="w3-card-2">
+<img src="<%= asset_path ('img1.jpg') %>" style="width:100%">
+<div class="w3-container">
+<h5>Scavenger hunt...First event</h5>
+</div>
+</div>
+</div>
+
+<div class="w3-third">
+<div class="w3-card-2">
+<img src="<%= asset_path ('img5.jpg') %>" style="width:100%">
+<div class="w3-container">
+<h5>Rainbow 2K13</h5>
+</div>
+</div>
+</div>
+
+</div>
+
+<div class="w3-row-padding w3-margin-top">
+
+<div class="w3-third">
+<div class="w3-card-2">
+<img src="<%= asset_path ('img7.jpg') %>" style="width:100%">
+<div class="w3-container">
+<h5>Batch 2 Birthday Celebration</h5>
+</div>
+</div>
+</div>
+
+<div class="w3-third">
+<div class="w3-card-2">
+<img src="<%= asset_path ('img6.jpg') %>" style="width:100%">
+<div class="w3-container">
+<h5>School day 2nd yr</h5>
+</div>
+</div>
+</div>
+
+<div class="w3-third">
+<div class="w3-card-2">
+<img src="<%= asset_path ('img9.jpg') %>" style="width:100%">
+<div class="w3-container">
+<h5>Trdadditional day 2nd yr</h5>
+</div>
+</div>
+</div>
+
+</div>
+
+<div class="w3-row-padding w3-margin-top">
+
+<div class="w3-third">
+<div class="w3-card-2">
+<img src="<%= asset_path ('img10.jpg') %>" style="width:100%">
+<div class="w3-container">
+<h5>MissMatch day Celebration</h5>
+</div>
+</div>
+</div>
+
+<div class="w3-third">
+<div class="w3-card-2">
+<img src="<%= asset_path ('img11.jpg') %>" style="width:100%">
+<div class="w3-container">
+<h5>Tapori day Celebration</h5>
+</div>
+</div>
+</div>
+
+<div class="w3-third">
+<div class="w3-card-2">
+<img src="<%= asset_path ('img12.jpg') %>" style="width:100%" />
+<div class="w3-container">
+<h5>Trdadditional day </h5>
+</div>
+</div>
+</div>
+
+</div>
+
+<script>
+function w3_open() {
+    document.getElementsByClassName("w3-sidenav")[0].style.display = "block";
+}
+function w3_close() {
+    document.getElementsByClassName("w3-sidenav")[0].style.display = "none";
+}
+</script>
+
+
+</body>
+</html>
