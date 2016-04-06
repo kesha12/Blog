@@ -6,7 +6,11 @@ class PostsController < ApplicationController
 	def index
 		@posts =Post.all.order('created_at DESC')
 		@count= Post.count()
-		@last=Post.last
+		if Post.last
+			@last=Post.last
+		else
+			@last=Post.first
+		end
 	end
 
 	def new
